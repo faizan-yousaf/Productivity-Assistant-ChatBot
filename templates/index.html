@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Work Productivity Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Remote Work Productivity Assistant</h1>
+        
+        <div class="task-creator">
+            <h2>Create a New Task</h2>
+            <input type="text" id="taskName" placeholder="Task Name">
+            <textarea id="taskDescription" placeholder="Task Description"></textarea>
+            <button onclick="createTask()">Create Task</button>
+        </div>
+        
+        <div class="task-list">
+            <h2>To-Do List</h2>
+            <ul id="taskList"></ul>
+        </div>
+        
+        <div class="ai-assistant">
+            <h2>AI Assistant</h2>
+            <input type="text" id="question" placeholder="Ask a question...">
+            <button onclick="askAssistant()">Ask</button>
+            <p id="assistantResponse"></p>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
