@@ -3,7 +3,7 @@ from transformers import pipeline
 
 class AIAssistant:
     def __init__(self):
-        # Load a pre-trained language model for text generation (formerly conversational)
+        # Loading a pre-trained language model for text generation (gpt2 model from Hugging Face)
         self.model = pipeline('text-generation', model='gpt2')
         self.responses = {
             "time management": "Try the Pomodoro Technique: Work for 25 minutes, then take a 5-minute break.",
@@ -17,12 +17,12 @@ class AIAssistant:
     def get_response(self, question):
         question = question.lower()
         
-        # Check for specific keywords in the user's question
+        # Check for specific keywords in the user's question (mentioned above)
         for key in self.responses:
             if key in question:
                 return self.responses[key]
 
-        # If no specific keyword found, generate a response using the text-generation model
+        # If no specific keyword found, generate a response using the text-generation model 
         generated_response = self.model(question, max_length=100, num_return_sequences=1)
         return generated_response[0]['generated_text']
 

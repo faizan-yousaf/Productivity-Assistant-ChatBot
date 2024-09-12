@@ -1,3 +1,4 @@
+# loading the required libraries:
 import requests
 import os
 from dotenv import load_dotenv
@@ -8,6 +9,7 @@ API_KEY = os.getenv('TRELLO_API_KEY')
 TOKEN = os.getenv('TRELLO_TOKEN')
 BASE_URL = "https://api.trello.com/1"
 
+# creating a class for integration trello:
 class TrelloIntegration:
     def __init__(self):
         self.auth_params = {
