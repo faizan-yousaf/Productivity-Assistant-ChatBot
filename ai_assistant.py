@@ -4,7 +4,7 @@ from transformers import pipeline
 class AIAssistant:
     def __init__(self):
         # Load a pre-trained language model for text generation (formerly conversational)
-        self.model = pipeline('text-generation', model='microsoft/DialoGPT-medium')
+        self.model = pipeline('text-generation', model='gpt2')
         self.responses = {
             "time management": "Try the Pomodoro Technique: Work for 25 minutes, then take a 5-minute break.",
             "productivity": "Set clear, achievable goals for each day and prioritize your tasks.",

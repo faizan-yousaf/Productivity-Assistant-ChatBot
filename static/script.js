@@ -27,6 +27,7 @@ function getTasks() {
     .then(response => response.json())
     .then(tasks => {
         const taskList = document.getElementById('taskList');
+        
         taskList.innerHTML = '';
         tasks.forEach(task => {
             const li = document.createElement('li');
